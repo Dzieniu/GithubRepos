@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>GithubRepos</title>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="../scripts/app.js"></script>
+		<link href="../style/style.css" rel="stylesheet">
+	</head>
+	<body ng-app="GithubRepos" ng-controller="MainCtrl">
+
+		<main>
+			<div class="content">
+				<header>
+					<div id="search">
+						<input class="oval-border" ng-model="username" placeholder="Search username..." required></input>
+						<button class="oval-border" ng-click="getRepos(username)" ng-disabled="!username" title="{{(!username?' You need to enter username' : '')}}"><strong>Search</strong></button>
+					</div>
+				</header>
+				<section >
+					<div id="githubContent" ng-show="ready==true">
+					<div id="user" >
+						<div id="avatar">
+							<img ng-src="{{currentUser.avatar}}"/>
+						</div>
+						<div id="info" >
+							<div class="line login"><em>@{{currentUser.login}}</em></div>
+							<span class="line name">{{currentUser.name}}</span>
+							<span class="line bio">{{currentUser.bio}}</span>
+							<span ng-if="currentUser.bio==null" class="line bio">Bio not available</span>
+						</div>
+					</div>
+					<div id="repositories">
+						<div id="repo-header">Repositories</div>
+						<div id="repo" ng-repeat="repo in currentUser.repos">
+							<div id="name" >
+								{{repo.name}}
+							</div>
+							<div id="stats">
+								<img src="../star.png"/> {{repo.stargazers_count}}
+								<img src="../branches.png"/> {{currentUser.branches[$index]}}
+							</div>
+						</div>
+					</div>
+					</div>
+					<div id="error" ng-show="nouser">
+						Does not exist
+					</div>
+				</section>
+			</div>
+		</main>
+	
+	</body>
+</html>

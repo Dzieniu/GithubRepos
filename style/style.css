@@ -1,0 +1,132 @@
+body{
+	background-color:#f0f0f0;
+	font-family: "Arial", serif;
+	padding-top:30px;
+	width:100%;
+	word-wrap: break-word;
+}
+
+.content{
+	width:40% ;
+	margin:auto;
+	background-color:white;
+	border-radius:5px;
+	padding:20px;
+	box-shadow: 12px 10px 25px -2px rgba(153,153,153,0.72);
+}
+#search{
+	height:30px;
+}
+#search input{
+	height:100%;
+	float:left;
+	width:70%;
+	padding:5px;
+   	border-color: #f0f0f0;
+}
+#search button{
+	height:100%;
+	width:25%;
+	font-size:9px;
+	float:right;
+   	background: linear-gradient(white, #f0f0f0); 
+   	
+}
+#search button([disabled]):hover{
+}
+#search button:not([disabled]):hover{
+   	background: #f0f0f0;
+   	cursor:pointer;
+}
+
+#search button:focus{
+   	outline-width: 0;
+}
+#search input:focus{
+   	outline-width: 0;
+}
+.oval-border{
+	border-style: solid;
+	border-radius:5px;
+	border-width:1px;
+}
+
+#user{width:100%;
+}
+#avatar{
+	display:inline;
+	width:60px;
+	padding-right:10px;
+	float:left;
+}
+#avatar img{
+	width:60px;
+	width:60px;
+	border-radius:3px;
+}
+#info{
+	width: calc(100% - 70px);
+    	display: inline-block;
+}
+.line{
+	display:block;
+}
+.login{
+	font-size:10px;
+}
+.name{
+	font-size:22px;
+	font-weight: bold;
+	color:#474747;
+	padding: 5.5px 0px 5.5px 0px;
+}
+.bio{
+	font-size:10px;
+}
+
+#repositories{
+	margin-top:10px;
+}
+#repo-header{
+	padding-bottom:7px;
+	border-bottom:solid;
+	border-width:1px;
+	border-color:black;
+	font-size:12px;
+	font-weight: bold;
+}
+#repo{
+	padding:10px;
+	border-bottom:solid;
+	border-width:1px;
+	border-color:#d6d6d6;
+
+}
+#name{
+	font-size:10px;
+	font-weight: bold;
+	display:inline-block
+}
+#stats{
+	font-size:10px;
+	display:inline-block;float:right
+}
+#stats img{
+	width:10px;
+	height:10px;
+}
+#error{
+	padding:10px;
+	background-color:#ffbfc1;
+	color:#bf4040;
+	border:solid;
+	border-width:1px;
+	border-color:#bf4040;
+	border-radius:5px;
+	font-size:10px;
+	margin-top:10px;
+}
+#githubContent{
+	margin-top:10px;
+}
+
